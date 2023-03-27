@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="shareSection">
+        <h1>Lorem, ipsum dolor sit amet.</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolorum id quisquam, alias quidem labore ipsa ullam at sapiente similique excepturi eveniet quae, quasi ipsam magnam culpa tenetur ab! Nobis nostrum, consectetur. Laudantium modi nesciunt tempore ratione qui voluptates dolorem tempora id, aperiam porro, quidem fuga iste aliquid iusto molestiae eum distinctio, rem dolores blanditiis unde animi atque saepe, consequuntur maxime. Nam, dolorem. Aspernatur saepe recusandae vero nihil eius quasi, dolore eum quaerat repellendus animi, praesentium sed explicabo. Velit laboriosam ea assumenda ipsum a aliquam odio suscipit. Eius excepturi officia doloremque, incidunt sed, dicta suscipit necessitatibus temporibus, inventore consequuntur perferendis veniam dolore deserunt cum repudiandae amet, quis cupiditate eveniet nihil facilis vitae praesentium repellat impedit sunt! Voluptates, aperiam, nostrum rerum esse iste dicta? Non itaque, veniam voluptatum animi eaque ipsum adipisci quidem excepturi autem reprehenderit dolorem beatae nesciunt possimus, sed iusto quia provident neque eligendi. Harum minus recusandae deserunt a excepturi, aliquam iure maxime necessitatibus consequuntur eius, enim illum totam beatae quibusdam, nam nobis? Ex voluptatem minima repudiandae facilis, eum tempore consequuntur, accusantium porro ad pariatur deleniti, aspernatur omnis! Architecto quo recusandae laborum eveniet doloremque assumenda voluptas ipsa exercitationem tempora, omnis. Obcaecati expedita dicta sapiente rem, dolores repellat dolor veritatis?
+        </p>
+    </div>
+    <!-- Add this button on your webpage -->
+    <button onclick="shareOnFacebook()">Share on Facebook</button>
+    <button onclick="shareOnTwitter()">Share on Twitter</button>
+    <!-- Add the following JavaScript code in your webpage -->
+    <script>
+    function shareOnFacebook() {
+        const selection = window.getSelection().toString();
+        const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}&quote=${encodeURIComponent(selection)}`;
+        window.open(shareUrl, '_blank');
+    }
+
+    function shareOnTwitter() {
+        const selection = window.getSelection().toString();
+        const shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(selection)}`;
+        window.open(shareUrl, '_blank');
+    }
+    </script>
+</body>
+
+</html>
